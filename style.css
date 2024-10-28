@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: URL('NGGbg.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+#menu-container{
+    background-color: rgba(68, 68, 68, 0.075);
+    backdrop-filter: blur(2px);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 340px;
+}
+.container {
+    background-color: rgba(68, 68, 68, 0.075);
+    backdrop-filter: blur(2px);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 320px;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 10px; /* Add margin for spacing */
+}
+
+p {
+    color: #ffffff; /* Slightly lighter for better readability */
+}
+
+button, input[type="number"] {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #317bcf;
+}
+
+input[type="number"] {
+    text-align: center;
+    width: 18rem;
+}
+
+#output {
+    font-family: monospace; /* Terminal-like font */
+    color: #333;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap; /* Preserve whitespace */
+    text-align: left;
+    margin-top: 10px; /* Add margin for spacing */
+    height: auto; /* Dynamic height */
+    min-height: 20px; /* Minimum height for consistency */
+}
+
+/* Back to Menu button styles */
+.back-button {
+    background-color: #33363a; /* Bootstrap primary color */
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 10px; /* Add some space above the button */
+    border: none; /* Remove border for a cleaner look */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    width: 100%; /* Make it full width */
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+/* Additional feedback styles */
+.feedback {
+    margin-top: 10px;
+    font-family: monospace; /* Terminal-like font */
+    color: green; /* Change color as needed */
+}

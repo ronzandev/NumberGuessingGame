@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game - Hard</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Number Guessing Game - Hard</h1>
+        <p>Guess a number between 1 and 100:</p>
+        <input type="number" id="guess" />
+        <button id="submit">Submit Guess</button>
+        <div id="output"></div>
+        <button class="back-button" onclick="location.href='index.html'">Back to Menu</button>
+    </div>
+    <py-script>
+        import random
+
+        # Generate a random number between 1 and 100
+        secret_number = random.randint(1, 100)
+        attempts = 0
+
+        def check_guess(event):
+            global attempts
+            user_guess = int(Element("guess").value)
+            attempts += 1
+            output = Element("output")
+            
+            if user_guess < secret_number:
+                output.element.innerHTML += f"Attempt {attempts}: {user_guess} is too low!<br>"
+            elif user_guess > secret_number:
+                output.element.innerHTML += f"Attempt {attempts}: {user_guess} is too high!<br>"
+            else:
+                output.element.innerHTML += f"Congratulations! {user_guess} is correct! You found it in {attempts} attempts!<br>"
+                Element("submit").disable()  # Disable button after correct guess
+
+        # Bind the check_guess function to the button click event
+        Element("submit").element.onclick = check_guess
+    </py-script>
+</body>
+</html>
